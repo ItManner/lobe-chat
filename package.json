@@ -5,22 +5,22 @@
   "keywords": [
     "chatbot",
     "ChatGPT",
-    "LobeHub",
+    "RooVps",
     "typescript",
     "Vercel AI SDK",
     "Next.js",
     "OpenAI"
   ],
-  "homepage": "https://github.com/lobehub/lobe-chat",
+  "homepage": "https://github.com/",
   "bugs": {
-    "url": "https://github.com/lobehub/lobe-chat/issues/new/choose"
+    "url": "https://github.com/"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lobehub/lobe-chat.git"
+    "url": "https://github.com/"
   },
   "license": "MIT",
-  "author": "LobeHub <i@lobehub.com>",
+  "author": "RooVps Chat",
   "sideEffects": false,
   "scripts": {
     "build": "next build",

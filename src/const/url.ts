@@ -13,7 +13,7 @@ export const WIKI = urlJoin(GITHUB, 'wiki');
 export const WIKI_PLUGIN_GUIDE = urlJoin(WIKI, 'Plugin-Development');
 export const ABOUT = pkg.homepage;
 export const FEEDBACK = pkg.bugs.url;
-export const DISCORD = 'https://discord.gg/AYFPHvv2jT';
+export const DISCORD = 'https://discord.gg/';
 
 export const { PLUGINS_INDEX_URL, AGENTS_INDEX_URL } = getClientConfig();
 
@@ -39,7 +39,7 @@ export const getAgentJSON = (
   return urlJoin(baseUrl, `${identifier}.${lang}.json`);
 };
 
-export const AGENTS_INDEX_GITHUB = 'https://github.com/lobehub/lobe-chat-agents';
+export const AGENTS_INDEX_GITHUB = 'https://github.com/';
 export const AGENTS_INDEX_GITHUB_ISSUE = urlJoin(AGENTS_INDEX_GITHUB, 'issues/new');
 
 export const SESSION_CHAT_URL = (id: string = INBOX_SESSION_ID, mobile?: boolean) =>
