@@ -4,17 +4,19 @@ import { useRouter } from 'next/navigation';
 
 import { useGlobalStore } from '@/store/global';
 import { useSessionStore } from '@/store/session';
-import { sessionSelectors } from '@/store/session/slices/session/selectors';
+import { sessionSelectors } from '@/store/session/selectors';
 import { pathString } from '@/utils/url';
 
 import { AssistantMessage } from './Assistant';
 import { DefaultMessage } from './Default';
 import { FunctionMessage } from './Function';
+import { UserMessage } from './User';
 
 export const renderMessages: ChatListProps['renderMessages'] = {
-  assistant: AssistantMessage,
-  default: DefaultMessage,
-  function: FunctionMessage,
+  assistant: AssistantMessage as any,
+  default: DefaultMessage as any,
+  function: FunctionMessage as any,
+  user: UserMessage as any,
 };
 
 export const useAvatarsClick = (): ChatListProps['onAvatarsClick'] => {
@@ -30,8 +32,8 @@ export const useAvatarsClick = (): ChatListProps['onAvatarsClick'] => {
           isInbox
             ? router.push('/settings/agent')
             : mobile
-            ? router.push(pathString('/chat/settings', { hash: location.hash }))
-            : toggleSystemRole(true);
+              ? router.push(pathString('/chat/settings', { hash: location.hash }))
+              : toggleSystemRole(true);
       }
     }
   };
